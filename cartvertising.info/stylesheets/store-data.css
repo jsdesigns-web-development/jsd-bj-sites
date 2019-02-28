@@ -1,0 +1,12 @@
+#store-data {
+  background: #354358;
+}
+
+#store-data a {
+  cursor: default;
+}
+@media screen and (max-width: 985px) {
+  #store-data a {
+    font-size: 22px;
+  }
+}

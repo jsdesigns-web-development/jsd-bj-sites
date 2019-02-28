@@ -1,0 +1,111 @@
+#intro p {
+  border: 1px solid #252F3D;
+  color: black;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 985px) {
+  #intro p {
+    font-size: 30px;
+  }
+
+}
+
+.about-the-program {
+  margin: 1em;
+}
+.about-the-program span {
+  display: block;
+}
+
+#title {
+  padding: 1.4rem 1.4rem 0 1.4rem;
+  background-color: whitesmoke;
+  height: auto;
+}
+
+#title h1 {
+  margin-bottom: 0.5em;
+}
+
+#title h1 span{
+  display: block;
+  text-align: center;
+}
+#cartvertising-title {
+  color: #D42A2D;
+  font-weight: 500;
+}
+
+#scap-title {
+  color: #32798F;
+
+}
+.video-container {
+  text-align: center;
+}
+.title-container {
+  margin: 0 auto;
+  margin-top: 0.0rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.video-thumbnails {
+  margin:0 auto;
+  text-align: center;
+}
+
+.video-row-align {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+.align-video-bottom {
+  position: relative;
+  bottom: 2px;
+}
+
+@media screen and (max-width: 985px) {
+  #vid1, #vid2 {
+    width: auto;
+    height: auto;
+  }
+}
+
+/*#vid1, #vid2 {
+  width:460px;
+  height: 259px;*/
+#vid1 {
+  width: 700px;
+  height: 394.13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#vid1:hover, #vid2:hover {
+  cursor: pointer;
+}
+
+#vid1 {
+  background-image: url("../imgs/thumbnails/put-your-business-here_460x259.jpg");
+}
+
+#vid2 {
+  background-image: url("../imgs/thumbnails/why-cartvertising-works_460x259.jpg");
+}
+
+#vid1:hover {
+  background-image: url("../imgs/thumbnails/put-your-business-here_460x259_hover.jpg");
+}
+
+#vid2:hover {
+  background-image: url("../imgs/thumbnails/why-cartvertising-works_460x259_hover.jpg");
+}
+
+.spacer {
+  width: 1em;
+}

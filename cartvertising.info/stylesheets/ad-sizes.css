@@ -1,0 +1,33 @@
+#ad-sizes {
+  background: #D42A2D;
+}
+.card-container {
+  width: 100%;
+}
+
+.card-ad-size {
+  width: 18rem;
+  height: 100%
+}
+
+@media (max-width:985px) {
+  .card-ad-size {
+    width: 16rem;
+    height: 100%
+  }
+
+  .card-body p,
+  .modal-body-text-container p {
+    font-size: 22px;
+  }
+
+}
+
+.modal-body-img-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-body-text-container {
+  margin-top: 1em;
+}
