@@ -1,0 +1,241 @@
+@import 'variabls';
+
+/*--
+    - Position
+------------------------------------------------------*/
+.static {
+    position: static;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+
+/*--
+    - Font Weight, Style, Color Classes
+------------------------------------------------------*/
+/*Font Weight*/
+@for $i from 1 through 9 {
+    .font-weight-#{100 * $i} {
+        font-weight: 100 * $i;
+    }
+}
+/*Font Style*/
+.font-style-normal {
+    font-style: normal;
+}
+.font-style-italic {
+    font-style: italic;
+}
+
+/*--
+- Custom Column For Extra Large col-cxl-
+------------------------------------------------------*/
+@media only screen and (min-width: 1500px) {
+    @for $i from 1 through 12 {
+        .col-cxl-#{1 * $i} {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            flex: 0 0 calc(#{100% / $i});
+            max-width: calc(#{100% / $i});
+        }
+    }
+}
+
+/*--
+    - Custom Row
+------------------------------------------------------*/
+@for $i from 0 through 100 {
+    .row-#{1 * $i} {
+        margin-left: -0.5px * $i;
+        margin-right: -0.5px * $i;
+        & > [class*="col"] {
+            padding-left: 0.5px * $i;
+            padding-right: 0.5px * $i;
+        }
+        & .slick-list {
+            & [class*="col"] {
+                padding-left: 0.5px * $i;
+                padding-right: 0.5px * $i;
+            }
+        }
+    }
+}
+@media #{$laptop-device}{
+    @for $i from 31 through 100 {
+        .row-#{1 * $i} {
+            margin-left: -15px;
+            margin-right: -15px;
+            & > [class*="col"] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+@media #{$desktop-device}{
+    @for $i from 31 through 100 {
+        .row-#{1 * $i} {
+            margin-left: -15px;
+            margin-right: -15px;
+            & > [class*="col"] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+@media #{$tablet-device}{
+    @for $i from 31 through 100 {
+        .row-#{1 * $i} {
+            margin-left: -15px;
+            margin-right: -15px;
+            & > [class*="col"] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+@media #{$large-mobile}{
+    @for $i from 31 through 100 {
+        .row-#{1 * $i} {
+            margin-left: -15px;
+            margin-right: -15px;
+            & > [class*="col"] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+/*-- 
+    - Margin & Padding
+------------------------------------------------------*/
+/*-- Margin --*/
+@for $i from 0 through 40 {
+    .mt-#{5 * $i}{margin-top: 5px *$i !important;}
+    .mb-#{5 * $i}{margin-bottom: 5px *$i !important;}
+    .ml-#{5 * $i}{margin-left: 5px *$i !important;}
+    .mr-#{5 * $i}{margin-right: 5px *$i !important;}
+    .mtn-#{5 * $i}{margin-top: -5px *$i !important;}
+    .mbn-#{5 * $i}{margin-bottom: -5px *$i !important;}
+    .mln-#{5 * $i}{margin-left: -5px *$i !important;}
+    .mrn-#{5 * $i}{margin-right: -5px *$i !important;}
+}
+@media #{$laptop-device}{
+    @for $i from 0 through 40 {
+        .mt-lg-#{5 * $i}{margin-top: 5px * $i !important;}
+        .mb-lg-#{5 * $i}{margin-bottom: 5px * $i !important;}
+        .ml-lg-#{5 * $i}{margin-left: 5px * $i !important;}
+        .mr-lg-#{5 * $i}{margin-right: 5px * $i !important;}
+        .mtn-lg-#{5 * $i}{margin-top: -5px * $i !important;}
+        .mbn-lg-#{5 * $i}{margin-bottom: -5px * $i !important;}
+        .mln-lg-#{5 * $i}{margin-left: -5px * $i !important;}
+        .mrn-lg-#{5 * $i}{margin-right: -5px * $i !important;}
+    }
+}
+@media #{$desktop-device}{
+    @for $i from 0 through 40 {
+        .mt-md-#{5 * $i}{margin-top: 5px * $i !important;}
+        .mb-md-#{5 * $i}{margin-bottom: 5px * $i !important;}
+        .ml-md-#{5 * $i}{margin-left: 5px * $i !important;}
+        .mr-md-#{5 * $i}{margin-right: 5px * $i !important;}
+        .mtn-md-#{5 * $i}{margin-top: -5px * $i !important;}
+        .mbn-md-#{5 * $i}{margin-bottom: -5px * $i !important;}
+        .mln-md-#{5 * $i}{margin-left: -5px * $i !important;}
+        .mrn-md-#{5 * $i}{margin-right: -5px * $i !important;}
+    }
+}
+@media #{$tablet-device}{
+    @for $i from 0 through 40 {
+        .mt-sm-#{5 * $i}{margin-top: 5px * $i !important;}
+        .mb-sm-#{5 * $i}{margin-bottom: 5px * $i !important;}
+        .ml-sm-#{5 * $i}{margin-left: 5px * $i !important;}
+        .mr-sm-#{5 * $i}{margin-right: 5px * $i !important;}
+        .mtn-sm-#{5 * $i}{margin-top: -5px * $i !important;}
+        .mbn-sm-#{5 * $i}{margin-bottom: -5px * $i !important;}
+        .mln-sm-#{5 * $i}{margin-left: -5px * $i !important;}
+        .mrn-sm-#{5 * $i}{margin-right: -5px * $i !important;}
+    }
+}
+@media #{$large-mobile}{
+    @for $i from 0 through 40 {
+        .mt-xs-#{5 * $i}{margin-top: 5px * $i !important;}
+        .mb-xs-#{5 * $i}{margin-bottom: 5px * $i !important;}
+        .ml-xs-#{5 * $i}{margin-left: 5px * $i !important;}
+        .mr-xs-#{5 * $i}{margin-right: 5px * $i !important;}
+        .mtn-xs-#{5 * $i}{margin-top: -5px * $i !important;}
+        .mbn-xs-#{5 * $i}{margin-bottom: -5px * $i !important;}
+        .mln-xs-#{5 * $i}{margin-left: -5px * $i !important;}
+        .mrn-xs-#{5 * $i}{margin-right: -5px * $i !important;}
+    }
+}
+
+/*-- Padding --*/
+@for $i from 0 through 40 {
+    .pt-#{5 * $i}{padding-top: 5px *$i !important;}
+    .pb-#{5 * $i}{padding-bottom: 5px *$i !important;}
+    .pl-#{5 * $i}{padding-left: 5px *$i !important;}
+    .pr-#{5 * $i}{padding-right: 5px *$i !important;}
+}
+@media #{$laptop-device}{
+    @for $i from 0 through 40 {
+        .pt-lg-#{5 * $i}{padding-top: 5px * $i !important;}
+        .pb-lg-#{5 * $i}{padding-bottom: 5px * $i !important;}
+        .pl-lg-#{5 * $i}{padding-left: 5px * $i !important;}
+        .pr-lg-#{5 * $i}{padding-right: 5px * $i !important;}
+    }
+}
+@media #{$desktop-device}{
+    @for $i from 0 through 40 {
+        .pt-md-#{5 * $i}{padding-top: 5px * $i !important;}
+        .pb-md-#{5 * $i}{padding-bottom: 5px * $i !important;}
+        .pl-md-#{5 * $i}{padding-left: 5px * $i !important;}
+        .pr-md-#{5 * $i}{padding-right: 5px * $i !important;}
+    }
+}
+@media #{$tablet-device}{
+    @for $i from 0 through 40 {
+        .pt-sm-#{5 * $i}{padding-top: 5px * $i !important;}
+        .pb-sm-#{5 * $i}{padding-bottom: 5px * $i !important;}
+        .pl-sm-#{5 * $i}{padding-left: 5px * $i !important;}
+        .pr-sm-#{5 * $i}{padding-right: 5px * $i !important;}
+    }
+}
+@media #{$large-mobile}{
+    @for $i from 0 through 40 {
+        .pt-xs-#{5 * $i}{padding-top: 5px * $i !important;}
+        .pb-xs-#{5 * $i}{padding-bottom: 5px * $i !important;}
+        .pl-xs-#{5 * $i}{padding-left: 5px * $i !important;}
+        .pr-xs-#{5 * $i}{padding-right: 5px * $i !important;}
+    }
+}
+
+/*--
+    - Width & Height
+------------------------------------------------------*/
+@for $i from 1 through 350 {
+    .width-#{$i}px{width: 1px * $i !important; max-width: 100% !important;}
+}
+@for $i from 1 through 350 {
+    .width-#{$i}{width: 1% * $i !important;}
+}
+@for $i from 1 through 350 {
+    .height-#{$i}px{height: 1px * $i !important; max-height: 100% !important;}
+}
+@for $i from 1 through 100 {
+    .height-#{$i}{height: 1% * $i !important;}
+}
+@for $i from 1 through 100 {
+    .height-#{$i}vh{height: 1vh * $i !important;}
+}

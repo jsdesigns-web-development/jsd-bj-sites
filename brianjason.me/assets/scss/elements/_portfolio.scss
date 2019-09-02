@@ -1,0 +1,1139 @@
+/*--
+    Elements - Portfolio
+------------------------------------------------------*/
+
+/*Portfolio Filter*/
+.portfolio-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -20px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    @media #{$large-mobile} {
+        margin: 0 -10px;
+    }
+    & button, a {
+        display: inline-flex;
+        line-height: 30px;
+        font-size: 16px;
+        color: $heading-color;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        position: relative;
+        text-transform: uppercase;
+        margin: 0 20px;
+        @media #{$large-mobile} {
+            margin: 0 10px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid $color-1;
+            margin-left: -5px;
+            margin-top: -5px;
+            left: 50%;
+            opacity: 0;
+            transition: all 0.4s ease 0s;
+        }
+        &.active {
+            color: $color-1;
+            &::before {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+}
+/*Portfolio Filter 2*/
+.portfolio-filter-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -30px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    @media #{$desktop-device} {
+        margin: 0 -25px;
+    }
+    @media #{$tablet-device} {
+        margin: 0 -20px;
+    }
+    @media #{$large-mobile} {
+        margin: 0 -10px;
+    }
+    & button, a {
+        display: inline-flex;
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: transparent;
+        padding: 0;
+        border: 2px solid transparent;
+        position: relative;
+        text-transform: capitalize;
+        margin: 0 30px;
+        @media #{$desktop-device} {
+            margin: 0 25px;
+        }
+        @media #{$tablet-device} {
+            margin: 0 20px;
+        }
+        @media #{$large-mobile} {
+            margin: 0 10px;
+        }
+        &.active {
+            color: $heading-color;
+            border-bottom-color: $color-1;
+        }
+    }
+}
+
+/*Portfolio 1*/
+.uptimo-portfolio {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            & a {
+                display: block;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg,#343538 50%,rgba(0,0,0,0.3) 100%);
+                    opacity: 0;
+                    transition: all 0.35s ease 0s;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            padding: 20px;
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+            & .inner {
+                & .title {
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    & a {
+                        color: $white;
+                    }
+                }
+                & p {
+                    color: $white;
+                    max-width: 480px;
+                    opacity: 0.8;
+                    margin: auto;
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    @media #{$small-mobile} {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                    @media #{$extra-small-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            &.text-center {
+                & p {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            &.text-left {
+                & p {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+            &.text-right {
+                & p {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.7;
+                    }
+                }
+            }
+            & .content {
+                bottom: 70px;
+                opacity: 1;
+                @media #{$laptop-device} {
+                    bottom: 50px;
+                }
+                @media #{$desktop-device} {
+                    bottom: 30px;
+                }
+                @media #{$tablet-device} {
+                    bottom: 50px;
+                }
+                @media #{$large-mobile} {
+                    bottom: 20px;
+                }
+                @media #{$small-mobile} {
+                    bottom: 50px;
+                }
+                @media #{$extra-small-mobile} {
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 2*/
+.uptimo-portfolio-2 {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            & a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg,#343538 50%,rgba(0,0,0,0.3) 100%);
+                    opacity: 0;
+                    transition: all 0.35s ease 0s;
+                    z-index: 2;
+                }
+                & img {
+                    width: 100%;
+                    transition: all 1s ease;
+                }
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            padding: 30px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 9;
+            & .inner {
+                & .title {
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    & a {
+                        color: $white;
+                    }
+                }
+                & p {
+                    color: $white;
+                    max-width: 480px;
+                    opacity: 0.8;
+                    margin: auto;
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    @media #{$small-mobile} {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                    @media #{$extra-small-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            &.text-center {
+                & p {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            &.text-left {
+                & p {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+            &.text-right {
+                & p {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+                    & img {
+                        transform: scale(1.2) rotate(5deg);
+                    }
+                }
+            }
+            & .content {
+                bottom: 0px;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Portfolio 3*/
+.uptimo-portfolio-3 {
+    & .inner {
+        position: relative;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        & .thumb {
+            overflow: hidden;
+            position: relative;
+            & a {
+                display: block;
+                position: relative;
+                & img {
+                    width: 100%;
+                }
+            }
+            & .overlay-holder {
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background-color: $color-1;
+                opacity: 0.9;
+            }
+        }
+        & .content {
+            margin-top: 20px;
+            & .inner {
+                & .title {
+                    font-weight: 400;
+                    margin-bottom: 8px;
+                    & a {}
+                }
+                & span {
+                    display: block;
+                    font-size: 12px;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 4*/
+.uptimo-portfolio-4 {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            overflow: hidden;
+            position: relative;
+            & a {
+                display: block;
+                position: relative;
+                & img {
+                    width: 100%;
+                }
+            }
+            & .overlay-holder {
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background-color: rgba($color-1, 0.9);
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba($heading-color, 0.5);
+            & .inner {
+                & .title {
+                    font-weight: 400;
+                    margin: 0;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 5*/
+.uptimo-portfolio-5 {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            & a {
+                display: block;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $heading-color;
+                    opacity: 0;
+                    transition: all 0.35s ease 0s;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: all 0.6s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & .inner {
+                transition: all 0.6s ease-in-out;
+                margin-top: 50px;
+                & .title {
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                    & a {
+                        color: $white;
+                    }
+                }
+                & .categories {
+                    display: block;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $white;
+                    margin: 0;
+                    &::before {
+                        content: "";
+                        width: 60px;
+                        border-bottom: 1px solid rgba(255,255,255,.2);
+                        display: block;
+                        margin: 20px auto;
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+                }
+            }
+            & .content {
+                opacity: 1;
+                & .inner {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 6*/
+.uptimo-portfolio-6 {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            & a {
+                display: block;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $heading-color;
+                    opacity: 0;
+                    transition: all 0.35s ease 0s;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.6s ease-in-out;
+            & .inner {
+                background-color: $color-4;
+                & .title {
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    line-height: 24px;
+                    & a {
+                        color: $white;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+                }
+            }
+            & .content {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+/*Portfolio 7*/
+.uptimo-portfolio-7 {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        & .thumb {
+            display: block;
+            position: relative;
+            & img {
+                width: 100%;
+            }
+            & .overlay-holder {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                border-bottom: 5px solid transparent;
+                z-index: 2;
+            }
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: all 0.6s ease-in-out;
+            text-align: center;
+            z-index: 9;
+            & h6 {
+                text-transform: uppercase;
+                font-size: 14px;
+                & a {
+                    color: $white;
+                }
+            }
+        }
+        &:hover {
+            & .thumb {
+                & .overlay-holder {
+                    opacity: 1;
+                }
+            }
+            & .content {
+                opacity: 1;
+                top: 50%;
+            }
+        }
+    }
+}
+
+/*Portfolio (Parallax)*/
+.uptimo-portfolio-parallax {
+    padding: 160px 0;
+    overflow: hidden;
+    @media #{$tablet-device} {
+        padding: 100px 0;
+    }
+    @media #{$large-mobile} {
+        padding: 100px 0;
+    }
+    & .content {
+        & .title {
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 20px;
+        }
+        & p {
+            color: $white;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+        & .btn {}
+        &.text-center {
+            & p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &.text-left {
+            & p {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+        &.text-right {
+            & p {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/*Portfolio (Classic)*/
+.uptimo-portfolio-classic {
+    & .inner {
+        transition: all 0.4s ease 0s;
+        overflow: hidden;
+        & .thumb {
+            & a {
+                position: relative;
+                display: block;
+                overflow: hidden;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background-color: $heading-color;
+                    z-index: 2;
+                    opacity: 0;
+                    transition: all 0.5s ease 0s;
+                }
+                &::after {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    content: "\f030";
+                    font-family: $fontawesome;
+                    color: $white;
+                    transform: translateX(-50%) translateY(-50%);
+                    z-index: 2;
+                    opacity: 0;
+                    transition: all 0.5s ease 0s;
+                    margin-top: 50px;
+                }
+                &:hover {
+                    & img {
+                        transform: scale(1.1);
+                    }
+                    &::before {
+                        opacity: 0.8;
+                    }
+                    &::after {
+                        opacity: 1;
+                        margin-top: 0;
+                    }
+                }
+                & img {
+                    width: 100%;
+                    transition: transform 2s cubic-bezier(0,0,.44,1.18);
+                }
+            }
+        }
+        & .content {
+            & .title {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            & .categories {
+                display: block;
+                font-size: 12px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                color: lighten($heading-color-light, 30);
+                letter-spacing: 1px;
+            }
+            & p {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            & .btn {}
+        }
+    }
+    // Dark
+    &.dark {
+        & .inner {
+            background-color: $heading-color-light;
+            & .content {
+                padding: 30px;
+                & .title {
+                    & a {
+                        color: $white;
+                    }
+                }
+                & .categories {
+                    color: $white;
+                }
+                & p {
+                    color: $white;
+                }
+            }
+
+        }
+        &:nth-child(2n+1) {
+            & .inner {
+                & .thumb {
+                    order: 2;
+                    @media #{$tablet-device} {
+                        order: 1;
+                    }
+                    @media #{$large-mobile} {
+                        order: 1;
+                    }
+                }
+                & .content {
+                    order: 1;
+                    @media #{$tablet-device} {
+                        order: 2;
+                    }
+                    @media #{$large-mobile} {
+                        order: 2;
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .inner {
+                background-color: $color-1;
+                & .content {
+                    & .btn {
+                        background-color: $white !important;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio Details*/
+.portfolio-single {
+    & .portfolio-gallery {
+        & a {
+            display: block;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    & .content {
+        & .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        & .categories {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: lighten($heading-color-light, 30);
+            letter-spacing: 1px;
+        }
+        & p {
+            margin-bottom: 40px;
+            @media #{$large-mobile} {
+                margin-bottom: 30px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    & .portfolio-meta-data {
+        & li {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+            @media #{$large-mobile} {
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & .icon {
+                width: 30px;
+                i {
+                    line-height: 28px;
+                    color: $heading-color;
+                }
+            }
+            & span {}
+        }
+        &.inline {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px -10px;
+            & li {
+                margin: 5px 10px;
+            }
+            &.center {
+                justify-content: center;
+            }
+        }
+        &.style-2 {
+            margin: -10px;
+            display: flex;
+            flex-wrap: wrap;
+            & li {
+                padding: 25px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                border: 1px solid $gray-3;
+                margin: 10px;
+                flex: 1 0 calc(100% - 20px);
+                @media #{$tablet-device} {
+                    flex: 1 0 calc(50% - 20px);
+                }
+                @media #{$large-mobile} {
+                    flex: 1 0 calc(50% - 20px);
+                    padding: 20px;
+                }
+                @media #{$small-mobile} {
+                    flex: 1 0 calc(100% - 20px);
+                    padding: 25px;
+                }
+                & .icon {
+                    width: 70px;
+                    text-align: left;
+                    display: inline-flex;
+                    i {
+                        font-size: 50px;
+                        line-height: 1;
+                        color: $body-color;
+                    }
+                    img {}
+                }
+                & .info {
+                    & span {
+                        display: block;
+                        line-height: 20px;
+                        color: $heading-color;
+                        &:first-child {
+                            color: $body-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.style-3 {
+            & li {
+                & span {
+                    color: $heading-color-light;
+                    & span {
+                        color: $body-color;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    & .portfolio-social {
+        margin: -5px;
+        display: flex;
+        flex-wrap: wrap;
+        & a {
+            width: 26px;
+            height: 26px;
+            margin: 5px;
+            background-color: transparent;
+            color: $white;
+            opacity: 0.85;
+            border-radius: 50%;
+            line-height: 1;
+            transition: all 0.2s ease;
+            text-align: center;
+            & i {
+                font-size: 12px;
+                line-height: 27px;
+            }
+            &:hover {
+                opacity: 1;
+            }
+
+            &.facebook {
+                background-color: $facebook;
+            }
+            &.twitter {
+                background-color: $twitter;
+            }
+            &.linkedin {
+                background-color: $linkedin;
+            }
+            &.youtube {
+                background-color: $youtube;
+            }
+            &.pinterest {
+                background-color: $pinterest;
+            }
+        }
+    }
+}
+
+/*Portfolio Funfact*/
+.portfolio-funfact {
+    padding: 70px 20px;
+}
+
+/*Portfolio Navigation*/
+.portfolio-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    clear: both;
+    background-color: #f7f7f7;
+    & li {
+        flex: 1 0 auto;
+        & a {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            color: $body-color;
+            &:hover {
+                background-color: #eeeeee;
+                color: inherit;
+            }
+            & i {
+                font-size: 30px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+
+
+/*----- Portfolio Split -----*/
+.home-portfolio-split {
+    & .uptimo-fp-section {
+        overflow: hidden;
+        @media only screen and (min-width: 992px) {
+            opacity: 0;
+            transition: all 0.3s ease-in-out 0s;
+            &.active {
+                opacity: 1;
+            }
+        }
+        @media #{$tablet-device} {
+            height: auto !important;
+            & .fp-tableCell {
+                height: auto !important;
+            }
+        }
+        @media #{$large-mobile} {
+            height: auto !important;
+            & .fp-tableCell {
+                height: auto !important;
+            }
+        }
+    }
+    & #fp-nav {
+        display: none;
+    }
+    /*Arrows*/
+    & .uptimo-fp-arrows {
+        position: fixed;
+        z-index: 100;
+        right: 40px;
+        top: 50%;
+        opacity: 1;
+        transform: translate(0, -50%);
+        @media #{$tablet-device} {
+            display: none;
+        }
+        @media #{$large-mobile} {
+            display: none;
+        }
+        & ul {
+            & li {
+                display: flex;
+                width: 32px;
+                justify-content: center;
+                align-items: center;
+                & i {
+                    font-size: 32px;
+                }
+                &.prev, &.next {
+                    cursor: pointer;
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                        color: $heading-color;
+                    }
+                }
+                &.num {
+                    margin: 17px 0 20px;
+                    font-weight: 700;
+                    color: $heading-color;
+                    & span {
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Image*/
+.portfolio-fp-image {
+    @media only screen and (min-width: 992px) {
+        transform: translateX(100px);
+        transition: all 0.5s ease-in-out 0.3s;
+        opacity: 0;
+    }
+}
+/*Content*/
+.portfolio-fp-content {
+    max-width: 760px;
+    padding: 50px 80px;
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: 992px) {
+        transform: translateX(-100px);
+        transition: all 0.5s ease-in-out 0.3s;
+        opacity: 0;
+    }
+    @media #{$desktop-device} {
+        padding: 50px 30px;
+    }
+    @media #{$tablet-device} {
+        padding: 50px 30px;
+    }
+    @media #{$large-mobile} {
+        padding: 50px 30px;
+    }
+    & .inner {
+        & h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            @media #{$large-mobile}{
+                font-size: 26px;
+            }
+            @media #{$small-mobile}{
+                font-size: 24px;
+            }
+            @media #{$extra-small-mobile}{
+                font-size: 20px;
+            }
+        }
+        & p {
+            margin-bottom: 65px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media #{$large-mobile} {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+.active {
+    & .portfolio-fp-image, & .portfolio-fp-content {
+        @media only screen and (min-width: 992px) {
+            transform: translateX(0);
+            opacity: 1;
+            transition: all 0.5s ease-in-out 0.5s;
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .portfolio-filter {
+            & button, a {
+                &::before {
+                    border-top: 5px solid nth($colorList, $i);
+                }
+                &.active {
+                    color: nth($colorList, $i);
+                }
+            }
+        }
+        & .portfolio-filter-2 {
+            & button, a {
+                &.active {
+                    border-bottom-color: nth($colorList, $i);
+                }
+            }
+        }
+        & .uptimo-portfolio-classic {
+            &.dark {
+                &:hover {
+                    & .inner {
+                        background-color: nth($colorList, $i);
+                    }
+                }
+            }
+        }
+    }
+}

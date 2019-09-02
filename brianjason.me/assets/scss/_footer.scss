@@ -1,0 +1,26 @@
+/*----------------------------------------------------*/
+/*  06. Footer
+/*----------------------------------------------------*/
+.footer {
+	color: #9395a0;
+}
+
+.footer-bottom {}
+.uptimo-footer-copyright {
+    & p {
+        font-size: 11px;
+        letter-spacing: 3px;
+        line-height: 30px;
+        text-transform: uppercase;
+        & i {}
+    }
+}
+.footer-bottom-2 {
+    & .uptimo-footer-copyright {
+        & p {
+            border-top: 1px solid rgba(72,73,78,.3);
+            padding-top: 10px;
+            margin-top: -10px;
+        }
+    }
+}

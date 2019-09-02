@@ -1,0 +1,122 @@
+/*----------------------------------------*/
+/*  02. Header CSS
+/*----------------------------------------*/
+.header {
+    width: 100%;
+    z-index: 999;
+    @media #{$tablet-device} {
+        position: static;
+        background-color: $white !important;
+    }
+    @media #{$large-mobile} {
+        position: static;
+        background-color: $white !important;
+    }
+}
+/*Header Transparent*/
+.header-transparent {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    @media #{$tablet-device} {
+        position: static;
+    }
+    @media #{$large-mobile} {
+        position: static;
+    }
+    // Toggle Buttons
+    & .header-toggle-buttons {
+        & [class*="header-toggle"] {
+            & > a {
+                color: $white;
+                @media #{$tablet-device} {
+                   color: $heading-color;
+                }
+                @media #{$large-mobile} {
+                   color: $heading-color;
+                }
+            }
+        }
+    }
+
+}
+/*Header Mobile Sticky*/
+.header-mobile-sticky {
+    @media #{$tablet-device} {
+        position: absolute;
+    }
+    @media #{$large-mobile} {
+        position: absolute;
+    }
+}
+/*Header Fullwidth*/
+.header-fullwidth {
+    & .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+/*Fullpage JS Header*/
+.header-half {
+    width: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    padding: 0 65px;
+    &.header-left {
+        left: 0;
+        right: auto;
+    }
+    &.header-right {
+        left: 50%;
+        right: auto;
+    }
+    @media #{$laptop-device} {
+        padding: 0 15px;
+    }
+    @media #{$desktop-device} {
+        padding: 0 15px;
+    }
+    @media #{$tablet-device} {
+        width: 100%;
+        position: static;
+        left: 0;
+        padding: 0 15px;
+    }
+    @media #{$large-mobile} {
+        position: static;
+        width: 100%;
+        left: 0;
+        padding: 0 15px;
+    }
+    & .header-logo {
+        line-height: 100px;
+    }
+    & .header-bottom-right {
+        padding: 30px 0;
+    }
+}
+/*Header Aside*/
+.header-aside {
+    width: 380px;
+    background-color: #f7f7f7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    & .inner {
+        padding: 80px 40px;
+    }
+    @media #{$laptop-device} {
+        width: 320px;
+        & .inner {
+            padding: 60px 30px;
+        }
+    }
+}
+
+@import 'header/middle';
+@import 'header/bottom';
