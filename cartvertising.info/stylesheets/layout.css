@@ -37,3 +37,7 @@
   width:100%;
   position:absolute;
 }
+
+#smile, #next {
+  font-size: 2em;
+}

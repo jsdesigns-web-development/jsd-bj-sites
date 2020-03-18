@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134815966-1"></script>
     <script>
@@ -82,7 +84,7 @@
                  <div class="video-responsive">
                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RHQHSmlLMwE"
                    frameborder="0" allow="accelerometer; autoplay; encrypted-media;
-                   gyroscope; picture-in-picture" allowfullscreen>
+                   gyroscope; picture-in-picture" allowfullscreen >
                    </iframe>
                  </div>
                </div>
@@ -640,8 +642,14 @@
           <span>
             &copy; 2018 Cartvertising.info, All Rights Reserved.
           </span>
+          <br>
+          <span id="smile">
+            &#128513;
+          </span>
+          <span id="next">
+            &#10145;
+          </span>
         </div>
-        <br>
         <div class="align-justify font-weight-light font-italic">
           <span>
             Cartvertising.info is not owned by, or a property of, IndoorMedia.
@@ -654,10 +662,10 @@
 
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!--Script stops video from playing when modal is closed-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <!--Script stops video from playing when modal is closed-->
     <script>
       $("#modalVid1").on('hidden.bs.modal', function (e) {
           $("#modalVid1 iframe").attr("src", $("#modalVid1 iframe").attr("src"));
@@ -666,5 +674,19 @@
           $("#modalVid2 iframe").attr("src", $("#modalVid2 iframe").attr("src"));
       });
     </script>
+    <script type="text/javascript">
+      $('#next').hide();
+
+      $('#smile').on('click', function() {
+        $('#smile').hide();
+        $('#next').show();
+        $('#next').css("cursor", "pointer");
+      });
+
+      $('#next').on('click', function(){
+        location.href="rate-sheet.html";
+      });
+    </script>
+
   </body>
 </html>
